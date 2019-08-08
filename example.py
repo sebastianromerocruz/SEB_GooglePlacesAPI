@@ -44,7 +44,8 @@ rather a proof-of-concept exploration of the API's free-tier capabilities and ho
 logging.basicConfig(level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
 LOGGER = logging.getLogger()
 COMPANY_NAME_SAMPLE_QUOTES = getListOfCompanyNames(fileName = "All_comp2019May.csv", sizeOfList = 20 , country = "USA",
-#                                                    numberOfStopWordsToRemove = 0, sector ="Materials")
+                                                   numberOfStopWordsToRemove = 0, sector ="Materials")
+
 CITY_AMOUNT_LIMIT = 20
 
 # SOURCE:
