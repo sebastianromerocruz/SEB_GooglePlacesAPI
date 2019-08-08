@@ -43,7 +43,7 @@ rather a proof-of-concept exploration of the API's free-tier capabilities and ho
 
 logging.basicConfig(level = logging.DEBUG, format = '%(asctime)s - %(levelname)s - %(message)s')
 LOGGER = logging.getLogger()
-# COMPANY_NAME_SAMPLE_QUOTES = getListOfCompanyNames(fileName = "All_comp2019May.csv", sizeOfList = 20 , country = "USA",
+COMPANY_NAME_SAMPLE_QUOTES = getListOfCompanyNames(fileName = "All_comp2019May.csv", sizeOfList = 20 , country = "USA",
 #                                                    numberOfStopWordsToRemove = 0, sector ="Materials")
 CITY_AMOUNT_LIMIT = 20
 
@@ -52,18 +52,11 @@ CITY_AMOUNT_LIMIT = 20
 AMERICAN_CITIES = parseCitiesCSV(filename ="1000-largest-us-cities-by-population-with-geographic-coordinates.csv",
                                  hasHeader = True, state = "New Jersey")
 
-comps = ['"argonaut gold inc"', '"premier investment pptys inc"', '"lucky friday extn mining co"', '"amyris inc"',
-         '"allegheny technologies inc"', '"alcoa corp"', '"foy johnston inc"', '"boston sand  gravel co"',
-         '"westrock co"', '"calissio resources group inc"', '"xcelplus international inc"',
-         '"green earth technologies inc"', '"mosaic co"', '"monkey rock group inc"', '"coastal capital acquisition"',
-         '"u s rare earths inc"', '"united resources holdings gr"', '"silver falcon mining inc"',
-         '"eastern resources inc"', '"livent corp"']
-
 
 if __name__ == "__main__":
-    print(comps)
+    print(COMPANY_NAME_SAMPLE_QUOTES)
     startTime = time.time()
-    companyLocationsMaster = getCompanyLocationsNearLocationList(companyNameList = comps,
+    companyLocationsMaster = getCompanyLocationsNearLocationList(companyNameList = COMPANY_NAME_SAMPLE_QUOTES,
                                                                  locationsDictionary = AMERICAN_CITIES,
                                                                  limitOfAmountOfCities = CITY_AMOUNT_LIMIT)
 
