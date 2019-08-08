@@ -4,7 +4,10 @@ from QueryResult import QueryResult
 from CompanyLocations import CompanyLocations
 from FuzzyStringFilter import fuzzyStringFilterMatch, FilterType
 
-API_KEY = 'AIzaSyDDz0AkBgYi7HACzs3XiMSOXzfPwyMrHDU'  # Oscar
+# NOTE: GOOGLE PLACES API KEY REQUIRED HERE!
+API_KEY = 'SOME API KEY'
+
+
 # This list may not be exhaustive, or may not be strict enough
 GOOGLE_PLACES_IRRELEVANT_TYPES = ['amusement_park', 'aquarium', 'art_gallery', 'bakery', 'bar', 'beauty_salon',
                                   'book_store', 'bowling_alley', 'cafe', 'campground', 'casino', 'cemetery', 'church',
